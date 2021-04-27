@@ -11,7 +11,7 @@ public class Comparator implements java.util.Comparator<Block> {
 
     @Override
     public int compare(Block o1, Block o2) {
-        return (int)Math.ceil(calculateDistanceFromEnd(o2) - calculateDistanceFromEnd(o1));
+        return (int)Math.floor(calculateDistanceFromEnd(o2) - calculateDistanceFromEnd(o1));
     }
 
     private double calculateDistanceFromEnd(Block block) {

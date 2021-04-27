@@ -1,6 +1,7 @@
 package com.window;
 
 import javax.swing.*;
+import java.awt.event.KeyListener;
 
 public class Frame extends JFrame {
 
@@ -18,5 +19,9 @@ public class Frame extends JFrame {
 
     public void addPanel(JPanel panel) {
         this.add(panel);
+    }
+
+    public void addListeners(KeyListener keyListener) {
+        this.addKeyListener(keyListener);
     }
 }

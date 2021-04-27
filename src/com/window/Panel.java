@@ -25,12 +25,12 @@ public class Panel extends JPanel {
         //super.paintComponent(g);
         g.setColor(Color.BLACK);
         g.fillRect(0,0, width * offset, height * offset);
-        g.setColor(Color.GREEN);
-        g.fillRect(0,0, offset, offset);
-        g.setColor(Color.RED);
-        g.fillRect((width * offset) - offset,(height * offset ) - offset, offset, offset);
         g.setColor(Color.WHITE);
         g.fillRect(xCoordinate * offset,yCoordinate * offset, offset, offset);
+        g.setColor(Color.GREEN);
+        g.fillRect(5,5, offset - 10, offset - 10);
+        g.setColor(Color.RED);
+        g.fillRect((width * offset) - offset + 5,(height * offset) - offset + 5, offset - 10, offset - 10);
         for (int i = 0 ; i < height ; i++) {
             for (int j = 0 ; j < width ; j++) {
                 boardHandler.getBlockAt(j, i).show(g);

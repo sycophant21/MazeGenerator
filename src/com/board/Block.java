@@ -74,6 +74,15 @@ public class Block {
         this.leftLine = new Line2D.Double();
     }
 
+    public boolean removeNeighbour(Block block) {
+        if (this.neighbours.contains(block)) {
+            this.visitedNeighbours.add(block);
+            this.neighbours.remove(block);
+            return true;
+        }
+        return false;
+    }
+
     public List<Block> getVisitedNeighbours() {
         return visitedNeighbours;
     }
@@ -116,6 +125,7 @@ public class Block {
             if (block != null) {
                 visitedNeighbours.add(block);
                 neighbours.remove(block);
+                block.removeNeighbour(this);
             }
         }
         return block;
