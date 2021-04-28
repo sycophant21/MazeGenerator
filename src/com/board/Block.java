@@ -154,6 +154,8 @@ public class Block {
 
     public void show(Graphics graphics) {
         graphics.setColor(Color.WHITE);
+        Graphics2D graphics2D = (Graphics2D) graphics;
+        graphics2D.setStroke(new BasicStroke(3));
         for (Line2D line2D : linesToShow) {
             graphics.drawLine((int)line2D.getX1() ,(int)line2D.getY1(), (int)line2D.getX2(), (int)line2D.getY2());
         }
